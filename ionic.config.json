@@ -1,0 +1,8 @@
+{
+  "name": "idolar",
+  "app_id": "d56db53f",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
