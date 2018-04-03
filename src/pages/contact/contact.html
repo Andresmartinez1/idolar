@@ -6,12 +6,42 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list no-lines>
-    <button ion-item *ngFor="let item of HistoricoObservable | async" (click)="itemSelected(item)">
-      {{ item.Fecha }}
-    </button> 
+<ion-content padding>
+
+  <div >
+    <canvas id="canvas" height="100px" width="100px">{{ chart }}</canvas>
+  </div>
+  <ion-list>
+    <ion-item class="item">
+          <ion-grid>
+            <ion-row>
+              <ion-col col-6>
+                <canvas id="canvasDonut"  width="50" height="50">{{ chartDonut }}</canvas>
+              </ion-col>
+              <ion-col col-6>
+                <ion-row>
+                  <ion-col col-12>
+                    <p id="titulo">Tendencia</p>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col col-2>
+                    <p id="porcentaje">{{tendencia}}</p><p id="signo ">%</p>
+                  </ion-col>
+                  <ion-col col-10>
+                    <p id="Recomendación">Ideal para comprar</p>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+
+
+
+    </ion-item>
   </ion-list>
+
 
 
 </ion-content>

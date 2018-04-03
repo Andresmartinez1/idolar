@@ -1,18 +1,74 @@
-<ion-header>
-  <ion-navbar>
+<ion-header >
+  <ion-navbar transparent>
     <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
+Porcentaje que subio
+<ion-content padding >
+  
+    <ion-grid id="content">
+      <ion-row center>
+        <h2 *ngIf="datos" id="fecha">{{datos._timestamp.fecha_nice}}</h2>
+      </ion-row>
+      <ion-row center>
+          <h1 *ngIf="datos" id="dolares">{{datos.USD.transferencia}}Bs</h1>
+      </ion-row>
+    </ion-grid>
 
-<ion-content padding>
-  <ion-card *ngIf="datos">
-   
-      <ion-card-header>
-       {{datos._timestamp.fecha}}
-      </ion-card-header>
-      <ion-card-content>
-       <ion-item >{{datos.USD.transferencia}}</ion-item> 
-      </ion-card-content>
-    </ion-card>
-     
+<ion-list>
+  <ion-item class="item">
+    <ion-grid>
+      <ion-row>
+      <ion-col col-4>
+          <img src="https://image.flaticon.com/icons/svg/747/747478.svg">
+      </ion-col>
+      <ion-col col-8>
+         <ion-row>
+          <ion-col col-12>
+            <h1 class="montos" *ngIf="diferencia">+ {{diferencia}} Bs</h1>
+          </ion-col> 
+         </ion-row>
+         <ion-row>
+            <ion-col col-12>
+             <h1 class="montos" *ngIf="porcentaje">+ {{porcentaje}} %</h1>
+            </ion-col> 
+           </ion-row>
+      </ion-col>
+      </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item class="item">
+        <ion-grid>
+          <ion-row>
+          <ion-col col-4>
+              <img src="https://image.flaticon.com/icons/svg/748/748265.svg">
+          </ion-col>
+          <ion-col col-4>
+             <ion-row>
+              <ion-col col-12>
+                <h1 class="montos">35</h1>
+              </ion-col> 
+             </ion-row>
+             <ion-row>
+                <ion-col col-12>
+                 <h1 class="montos">45</h1>
+                </ion-col> 
+               </ion-row>
+          </ion-col>
+          <ion-col col-4>
+              <ion-row>
+                  <ion-col col-12>
+                    <h1 class="signos">Bs</h1>
+                  </ion-col> 
+                 </ion-row>
+                 <ion-row>
+                    <ion-col col-12>
+                     <h1 class="signos">Bs</h1>
+                    </ion-col> 
+                   </ion-row>
+            </ion-col>
+          </ion-row>
+          </ion-grid>
+        </ion-item>
+    </ion-list>
 </ion-content>

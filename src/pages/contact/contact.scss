@@ -1,3 +1,40 @@
 page-contact {
+    .item{
+        position: relative;
 
+    text-align: center;
+           padding-left: 0px;
+           padding-top: 0px;
+        margin-bottom: 10px;
+       border-left:6px solid color($colors,primary);;
+    }
+
+    #titulo{
+        margin-top: -20px;
+        font-family: 'Montserrat Regular';
+        font-size: 20px;
+    }
+    #porcentaje{
+        font-family: 'Montserrat Regular';
+        margin-left: -180px;
+        margin-top: 10px;
+        font-size: 25px;
+        font-weight: 900;
+    }
+    #canvasDonut{
+        padding: 0px;
+      margin-top: -10px;
+      margin-left: -8px;
+    }
+    .wrapper{
+        background-color: black;
+        width:200px;
+    }
+   #signo{
+    font-family: 'Montserrat Regular';
+    margin-left: -135px;
+    margin-top: -25px;
+    font-size: 15px;
+    font-weight: 900;
+   }
 }
